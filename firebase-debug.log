@@ -1,0 +1,51 @@
+[debug] [2022-03-02T23:08:45.418Z] ----------------------------------------------------------------------
+[debug] [2022-03-02T23:08:45.421Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\YoukavangHer\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-03-02T23:08:45.422Z] CLI Version:   10.2.2
+[debug] [2022-03-02T23:08:45.422Z] Platform:      win32
+[debug] [2022-03-02T23:08:45.422Z] Node Version:  v16.13.1
+[debug] [2022-03-02T23:08:45.431Z] Time:          Wed Mar 02 2022 17:08:45 GMT-0600 (Central Standard Time)
+[debug] [2022-03-02T23:08:45.431Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-02T23:08:45.438Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-03-02T23:08:45.581Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-02T23:08:45.581Z] > authorizing via signed-in user (tonicalendar1234@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\YoukavangHer
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-03-02T23:08:45.736Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-03-02T23:08:45.737Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-03-02T23:09:27.300Z] Using project from CLI flag: fir-tutorial-17dfb
+[debug] [2022-03-02T23:09:27.302Z] > refreshing access token with scopes: []
+[debug] [2022-03-02T23:09:27.303Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-02T23:09:27.469Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 02 Mar 2022 23:09:28 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-02T23:09:27.510Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fir-tutorial-17dfb [none]
+[debug] [2022-03-02T23:09:27.713Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fir-tutorial-17dfb 200
+[debug] [2022-03-02T23:09:27.714Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fir-tutorial-17dfb {"projectId":"fir-tutorial-17dfb","projectNumber":"668115858562","displayName":"Firebase-Tutorial","name":"projects/fir-tutorial-17dfb","resources":{"hostingSite":"fir-tutorial-17dfb","storageBucket":"fir-tutorial-17dfb.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] i  Using project fir-tutorial-17dfb (Firebase-Tutorial) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
