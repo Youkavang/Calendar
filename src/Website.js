@@ -34,7 +34,7 @@ function Website () {
                 <Route path='*' element={<Error/>}/> */}
             </Routes>
         </Router>
-        
+
     )
 }
 

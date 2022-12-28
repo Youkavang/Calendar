@@ -29,15 +29,6 @@ function Event({title, tags, date, startTime, endTime, location, name, descripti
         <a href={url} rel="noreferrer">Click here for more details</a>
         </ListItem>
     </List>
-    // <div>
-    //   {title}
-    //   <br/>
-    //   {date}
-    //   <br/>
-    //   {startTime} - {endTime}
-    //   <br/>
-    //   {description}
-    // </div>
   )
 }
 

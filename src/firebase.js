@@ -10,8 +10,8 @@ const firebaseConfig = {
   projectId: "fir-tutorial-17dfb",
   storageBucket: "fir-tutorial-17dfb.appspot.com",
   messagingSenderId: "668115858562",
-  appId: "1:668115858562:web:b5d24314aee9a46d2ff09b",
-  measurementId: "G-ENJNMY8DXW"
+  appId: "1:668115858562:web:ac6cc9031be6452e2ff09b",
+  measurementId: "G-Z783G1VG7S"
 };
 
 const app = initializeApp(firebaseConfig);

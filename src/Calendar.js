@@ -48,36 +48,44 @@ function Calendar() {
   //       onSnapshot(collection(db, "events"), (snapshot) =>
   //       setEvents(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
   //   },[]);
-
     useEffect(
       () =>{
-      //Will organize by name of who made the event in ascending order when a button is toggled
-      if(isNameToggled){
-      const eventRef = collection(db, "events");
-      const q = query(eventRef, orderBy("name", "asc"))
-      onSnapshot(q, (querySnapshot) =>
-      setEvents(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
-    } 
-      //Will organize by topic names in ascending order when a button is toggled. 
-      else if(isTagsToggled){
-      const eventRef = collection(db, "events");
-      const q = query(eventRef, orderBy("tags", "asc"))
-      onSnapshot(q, (querySnapshot) =>
-      setEvents(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
+          onSnapshot(collection(db, "events"), (snapshot) =>
+          setEvents(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        )
+        console.log(events)
+      },
+        []
+    );
+    // useEffect(
+    //   () =>{
+    //   //Will organize by name of who made the event in ascending order when a button is toggled
+    //   if(isNameToggled){
+    //   const eventRef = collection(db, "events");
+    //   const q = query(eventRef, orderBy("name", "asc"))
+    //   onSnapshot(q, (querySnapshot) =>
+    //   setEvents(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
+    // } 
+    //   //Will organize by topic names in ascending order when a button is toggled. 
+    //   else if(isTagsToggled){
+    //   const eventRef = collection(db, "events");
+    //   const q = query(eventRef, orderBy("tags", "asc"))
+    //   onSnapshot(q, (querySnapshot) =>
+    //   setEvents(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
   
-      //Will organize by start times. 
-      }else if(isStartToggled){
-        const eventRef = collection(db, "events");
-        const q = query(eventRef, orderBy("start", "asc"))
-        onSnapshot(q, (querySnapshot) =>
-        setEvents(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
+    //   //Will organize by start times. 
+    //   }else if(isStartToggled){
+    //     const eventRef = collection(db, "events");
+    //     const q = query(eventRef, orderBy("start", "asc"))
+    //     onSnapshot(q, (querySnapshot) =>
+    //     setEvents(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
         
-      //Default display of events
-      }else{
-      onSnapshot(collection(db, "events"), (snapshot) =>
-      setEvents(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
-    }
-      }, [isNameToggled, isTagsToggled, isStartToggled])
+    //   //Default display of events
+    //   }else{
+    //   onSnapshot(collection(db, "events"), (snapshot) =>
+    //   setEvents(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))))
+    // }
+    //   }, [isNameToggled, isTagsToggled, isStartToggled])
   
   const handleName = (e) => {
     setName(e.target.value)
@@ -128,16 +136,15 @@ function Calendar() {
   }
 
   const closeEventModal = () =>{
-    //uncomment later but need it for demo purposes
-    // setName('');
-    // setTitleInput('');
-    // setTags('');
+    setName('');
+    setTitleInput('');
+    setTags('');
     // setDateInput('');
-    // setStartTime('');
-    // setEndTime('');
-    // setLocation('');
-    // setDescriptionInput('');
-    // setUrl('');
+    setStartTime('');
+    setEndTime('');
+    setLocation('');
+    setDescriptionInput('');
+    setUrl('');
     setEventModal(false)
   }
 
@@ -398,6 +405,7 @@ function Calendar() {
         </div>
        
       </Modal>
+      
     </div>
   );
 }
